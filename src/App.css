@@ -1,38 +1,288 @@
-.App {
-  text-align: center;
+.page-bckground{
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.mainpage-layout{
+  height: 90%;
+  width: 90%;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: 8px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  overflow: hidden;
+  
+}
+.home-page-layout{
+  height: 100%;
+  width: 100%;
+  background-image: url('./images/grape.jpg');
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: 8px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.navbar{
+  height: 10%;
+  width: 40%;
+  background-color: transparent;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-links{
+  text-decoration: none;
+  font-size: 2em;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: font-size 0.3s;
   color: white;
 }
+.nav-links:hover{
+text-decoration: underline;
+font-size: 2.5em;
 
-.App-link {
-  color: #61dafb;
+}
+.headline{
+margin-top: 8%;
+ font-size: 8em;
+ color:#ff1d58;
+  font-family: "Snell Roundhand", cursive;
+    line-height: 160px;
+     font-weight: normal; 
+     margin-bottom:
+      0px; margin-top: 40px;
+       text-align: center;
+        text-shadow:0 1px 1px #fff; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wines-btn{
+  margin-top: 100px;
+  height: 80px;
+  width: 80px;
+  background-color: #ff1d58;
+  color: #fff;
+  font-size: 1.2em;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+  transition: width 0.3s, height 0.3s, font-size 0.3s;
+  border-radius: 50%;
+  text-decoration: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wines-btn:hover{
+ height: 90px;
+ width: 90px;
+ font-size: 1.3em;
+}
+
+.footer-layout{
+  height: 24%;
+  width: 70%;
+  background-color: rgb(235, 227, 213);
+  margin-top: 30px;
+  transform: translateY(100%);
+  transition: transform 0.5s;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-layout:hover{
+  transform: translateY(10%);
+}
+.footer-inner-layout{
+  height: 95%;
+  width: 98%;
+  background-color: rgb(235, 227, 213);;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-img{
+  height: 100px;
+  width: 120px;
+  padding: 3px;
+  transition: height 0.5s, width 0.5s;
+}
+.footer-img:hover{
+  position: absolute;
+  bottom: 30%;
+  height: 300px;
+  width: 320px;
+}
+
+.about-page{
+  height: 100%;
+  width: 100%;
+  background-color: 	rgb(211,211,211);;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.about-page::after{
+  content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.";
+  width: 0%;
+  height: 25%;
+  position: absolute;
+  transform: translateY(120%);
+  background-color: #ff1d58;
+  animation-name: text-appear;
+  animation-delay: 1.1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+ animation-timing-function: linear;
+  color: transparent;
+  
+}
+@keyframes text-appear{
+  0% {width: 0px; color: transparent; }
+  25% {width: 10%; color: transparent; }
+  50% {width: 25%; color: transparent; }
+  75% {width: 40%; color: transparent;}
+  100% {width: 50%; color: white; font-size: 1.3em; font-style: italic; }
+}
+
+.about-page-left{
+flex: 1;
+background-color: rgb(211,211,211);
+}
+.about-page-left > img{
+  width: 100%;
+  height:100%;
+}
+.about-page-right{
+ text-align: right;
+ flex: 1;
+ background-color: rgb(169,169,169);
+ }
+ .about-page-right > img{
+  width: 100%;
+  height:100%;
+}
+
+.back-btn{
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background-color: #ff1d58;
+  font-style: italic;
+  font-size: 1em;
+  cursor: pointer;
+}
+.grapes{
+  position: absolute;
+  bottom: 10%;
+  font-size: 6em;
+  
+}
+.wines-layout{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  
+}
+.wine-descrp{
+  
+  display: flex;
+  flex: 50%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  background-color: rgb(206, 202, 202);
+}
+.wine-descrp p{
+  font-size: 2em;
+}
+.wine-photo{
+  display: flex;
+  flex: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.btn-left{
+  position: absolute;
+  font-size: 2em;
+  left: 50px;
+  
+}
+.btn-right{
+  position: absolute;
+  font-size: 2em;
+  right: 50px;
+}
+.form{
+  width: 35%;
+  height: 70%;
+  box-shadow: 5px 10px #888888;
+  border-style:solid ;
+  background-color: rgb(121, 152, 211);
+}
+
+h1{
+  font-size: 1.5em;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  margin-top: 1em;
+
+}
+
+.form input{
+  height: 2em;
+  width: 45%;
+}
+
+.form textarea{
+  height: 20%;
+  width: 47%;
+}
+
+.back-btn-wines{
+  position: absolute;
+  left: 4%;
+  top: 4%;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background-color: #ff1d58;
+  font-style: italic;
+  font-size: 1em;
+  cursor: pointer;
 }

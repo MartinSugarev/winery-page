@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import About from './components/about'
+import Contacts from './components/contacts'
+import Homepage from './components/homepage'
+import Wines from './components/wines'
+import { Route, Switch } from 'react-router-dom'
+import { ContextImagesFunc } from './components/context'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="page-bckground">
+           <div className="mainpage-layout">
+             <ContextImagesFunc>
+              <Switch>
+                  <Route exact path="/" component={Homepage} />
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/contacts" component={Contacts} />
+                  <Route exact path="/wines" component={Wines}/>
+              </Switch>         
+            </ContextImagesFunc> 
+           </div>
+      </div>
+    </>
   );
 }
 
